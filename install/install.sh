@@ -28,3 +28,5 @@ chmod +x ./suckless.sh
 ./suckless.sh
 
 sudo apt install picom -y
+
+fc-cache -fv
