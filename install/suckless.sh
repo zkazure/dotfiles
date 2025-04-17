@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$config="$HOME/dotfiles/.config/"
+config="$HOME/dotfiles/.config/"
 suckless=("$config/dwm" "$config/dwmblocks" 
           "$config/dmenu" "$config/st")
 
