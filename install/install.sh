@@ -30,6 +30,7 @@ chmod +x ./suckless.sh
 # sudo apt install picom
 sudo apt install feh -y
 
+# install font
 fc-cache -fv
 
 sudo apt install extrepo -your

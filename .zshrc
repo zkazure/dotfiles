@@ -38,6 +38,7 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export PATH="$HOME/.local/bin/statusbar:$PATH"
+export PATH="$HOME/.config/emacs/bin:$PATH"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
