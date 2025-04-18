@@ -1,20 +1,26 @@
-# export GTK_IM_MODULE=ibus
-# export QT_IM_MODULE=ibus
-# export XMODIFIERS=@im=ibus
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
 
-export QT_QPA_PLATFORM=xcb
-export GDK_BACKEND=x11
+ export DISPLAY=:0
+ export XAUTHORITY="$HOME/.Xauthority"
+ export QT_QPA_PLATFORM=xcb
+ export GDK_BACKEND=x11
+
 # ibus-daemon -drx &
-
 setxkbmap -option ctrl:swapcaps
 
-# picom --backend glx&
-dwmblocks &
+
+feh --bg-scale ~/dotfiles/install/forest.jpg &
+
+# while ! dbus-update-activation-environment --systemd DISPLAY; do
+#     sleep 0.1
+# done
+
+nohup dwmblocks  &
 
 emacs --daemon &
 clash-verge &
-
-feh --bg-scale ~/dotfiles/install/forest.jpg
 exec dwm
 
 

@@ -62,3 +62,7 @@ systemctl --user enable pipewire
 sudo mv ./50-synaptics.conf /etc/X11/xorg.conf.d/
 
 sudo apt remove pulseaudio-utils xfce4-pulseaudio-plugin
+sudo cp ./pipewire*.service /etc/systemd/system/
+
+sudo apt install fcitx5 fcitx5-configtool fcitx5-chinese-addons
+sudo apt install fcitx5-rime
