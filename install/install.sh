@@ -34,3 +34,5 @@ fc-cache -fv
 sudo apt install extrepo -your
 sudo extrepo enable librewolf
 sudo apt update && sudo apt install librewolf
+sudo apt install zip curl -y
+chsh -s /bin/sh
