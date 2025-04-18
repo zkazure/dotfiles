@@ -34,7 +34,7 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 
 ### End of Zinit's installer chunk
 
-export $PATH="$HOME/.local/bin/statusbar:$PATH"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="$HOME/.local/bin/statusbar:$PATH"

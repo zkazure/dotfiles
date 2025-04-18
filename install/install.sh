@@ -36,3 +36,5 @@ sudo extrepo enable librewolf
 sudo apt update && sudo apt install librewolf
 sudo apt install zip curl -y
 chsh -s /bin/sh
+
+sudo systemctl diable lightdm
