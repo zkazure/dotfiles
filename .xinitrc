@@ -8,7 +8,7 @@ export GDK_BACKEND=x11
 
 setxkbmap -option ctrl:swapcaps
 
-picom --backend glx&
+# picom --backend glx&
 dwmblocks &
 
 clash-verge &
