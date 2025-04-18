@@ -56,3 +56,9 @@ ssh-keygen -t rsa -b 4096
 cp ./ssh-config ~/.ssh/config
 
 sudo apt install emacs
+# sudo apt install cmake libtool
+sudo apt install pipewire pipewire-audio pipewire-pulse
+systemctl --user enable pipewire
+sudo mv ./50-synaptics.conf /etc/X11/xorg.conf.d/
+
+sudo apt remove pulseaudio-utils xfce4-pulseaudio-plugin
