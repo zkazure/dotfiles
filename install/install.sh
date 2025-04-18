@@ -27,6 +27,6 @@ sudo apt install libx11-xcb-dev -y
 chmod +x ./suckless.sh
 ./suckless.sh
 
-sudo apt install picom -y
+sudo apt install picom feh -y
 
 fc-cache -fv

@@ -13,7 +13,7 @@ dwmblocks &
 
 clash-verge &
 
-feh --bg-scale ~/dotfiles//forest.jpg &
+feh --bg-scale ~/dotfiles/install/forest.jpg
 exec dwm
 
 
