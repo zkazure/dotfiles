@@ -49,3 +49,7 @@ git clone https://github.com/sxyazi/yazi.git
 cd yazi
 cargo build --release --locked
 sudo mv target/release/yazi target/release/ya /usr/local/bin/
+
+## ssh key with github
+ssh-keygen -t rsa -b 4096
+cp ./ssh-config ~/.ssh/config
