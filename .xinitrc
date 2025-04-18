@@ -11,6 +11,7 @@ setxkbmap -option ctrl:swapcaps
 # picom --backend glx&
 dwmblocks &
 
+emacs --daemon &
 clash-verge &
 
 feh --bg-scale ~/dotfiles/install/forest.jpg

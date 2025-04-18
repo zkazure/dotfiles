@@ -39,6 +39,9 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 
 export PATH="$HOME/.local/bin/statusbar:$PATH"
 export PATH="$HOME/.config/emacs/bin:$PATH"
+function em(){
+    emacsclient -c -a 'emacs'
+}
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
