@@ -30,3 +30,7 @@ chmod +x ./suckless.sh
 sudo apt install picom feh -y
 
 fc-cache -fv
+
+sudo apt install extrepo -your
+sudo extrepo enable librewolf
+sudo apt update && sudo apt install librewolf
