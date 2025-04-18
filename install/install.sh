@@ -54,3 +54,5 @@ sudo mv target/release/yazi target/release/ya /usr/local/bin/
 ## ssh key with github
 ssh-keygen -t rsa -b 4096
 cp ./ssh-config ~/.ssh/config
+
+sudo apt install emacs
