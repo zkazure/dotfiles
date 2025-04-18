@@ -39,3 +39,13 @@ sudo apt install zip curl -y
 chsh -s /bin/sh
 
 sudo systemctl diable lightdm
+
+sudo apt install ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source "$HOME/.cargo/env"
+rustup update
+cd ~/src 
+git clone https://github.com/sxyazi/yazi.git
+cd yazi
+cargo build --release --locked
+sudo mv target/release/yazi target/release/ya /usr/local/bin/
