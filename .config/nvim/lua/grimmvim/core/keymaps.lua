@@ -37,13 +37,13 @@ map("v", ">", ">gv", { desc = "Indent <", noremap = true, silent = false })
 
 -- Copy-Pasting
 map("v", "<C-c>", '"+y', { desc = "Copy To ClipB", noremap = true, silent = false })
-map("n", "<C-s>", '"+P', { desc = "Paste From ClipB", noremap = true, silent = false })
+map("n", "<C-v>", '"+P', { desc = "Paste From ClipB", noremap = true, silent = false })
 
 -- Focus between windows
-map("n", "<C-h>", "<C-w>h", { desc = "Focus Left", noremap = true, silent = false })
-map("n", "<C-j>", "<C-w>j", { desc = "Focus Right", noremap = true, silent = false })
-map("n", "<C-k>", "<C-w>k", { desc = "Focus Up", noremap = true, silent = false })
-map("n", "<C-l>", "<C-w>l", { desc = "Focus Down", noremap = true, silent = false })
+map("n", "<leader>wh", "<C-w>h", { desc = "Focus Left", noremap = true, silent = false })
+map("n", "<leader>wj", "<C-w>j", { desc = "Focus Right", noremap = true, silent = false })
+map("n", "<leader>wk", "<C-w>k", { desc = "Focus Up", noremap = true, silent = false })
+map("n", "<leader>wl", "<C-w>l", { desc = "Focus Down", noremap = true, silent = false })
 
 -- Resize windows or panes
 map("n", "<C-S-H>", "3<C-w>>", { desc = "Resize Left", noremap = true, silent = false })
@@ -54,8 +54,8 @@ map("n", "<C-S-L>", "3<C-w><", { desc = "Resize Down", noremap = true, silent = 
 -- Editing Keymaps
 map("n", "<leader>q", ":q<cr>", { desc = "Quit File", noremap = true, silent = true })
 map("n", "<leader>Q", ":qa<cr>", { desc = "Quit All Files", noremap = true, silent = true })
-map("n", "<leader>w", ":w<cr>", { desc = "Write File", noremap = true, silent = true })
-map("n", "<leader>W", ":wa<cr>", { desc = "Write All Files", noremap = true, silent = true })
+map("n", "<leader>fw", ":w<cr>", { desc = "Write File", noremap = true, silent = true })
+map("n", "<leader>fW", ":wa<cr>", { desc = "Write All Files", noremap = true, silent = true })
 map("n", "<leader>M", ":messages<cr>", { desc = "Show Messages", noremap = true, silent = true })
 
 -- Navigate between quickfix items
@@ -76,20 +76,20 @@ map(
 )
 
 -- Buffers
-map("n", "<Tab>", ":bnext<cr>", { desc = "Next Buffer", noremap = true, silent = true })
-map("n", "<S-Tab>", ":bprevious<cr>", { desc = "Previous Buffer", noremap = true, silent = true })
-map("n", "<leader>bn", ":enew<cr>", { desc = "New Empty Buffer", noremap = true, silent = true })
+map("n", "<leader>bp", ":bnext<cr>", { desc = "Next Buffer", noremap = true, silent = true })
+map("n", "<leader>bn", ":bprevious<cr>", { desc = "Previous Buffer", noremap = true, silent = true })
+map("n", "<leader>bN", ":enew<cr>", { desc = "New Empty Buffer", noremap = true, silent = true })
 map("n", "<leader>bl", ":blast<cr>", { desc = "Last Buffer", noremap = true, silent = true })
--- map("n", "<leader>bx", ":bp<bar>sp<bar>bn<bar>bd<cr>", { desc = "Delete Buffer", noremap = true, silent = true })
+map("n", "<leader>bk", ":bp<bar>sp<bar>bn<bar>bd<cr>", { desc = "Delete Buffer", noremap = true, silent = true })
 map("n", "<leader>bs", ":source %<cr>", { desc = "Source Buffer", noremap = true, silent = true })
 
 -- Splits and Panes
-map("n", "<leader>pv", "<C-w>v", { desc = "Split Vertically", noremap = true, silent = false })
-map("n", "<leader>ph", "<C-w>s", { desc = "Split Horizontally", noremap = true, silent = false })
-map("n", "<leader>pe", "<C-w>=", { desc = "Equal Split", noremap = true, silent = false })
-map("n", "<leader>px", ":close<CR>", { desc = "Close split", noremap = true, silent = false })
-map("n", "<leader>po", ":only<CR>", { desc = "Single Pane", noremap = true, silent = false })
+map("n", "<leader>wv", "<C-w>v", { desc = "Split Vertically", noremap = true, silent = false })
+map("n", "<leader>ws", "<C-w>s", { desc = "Split Horizontally", noremap = true, silent = false })
+-- map("n", "<leader>pe", "<C-w>=", { desc = "Equal Split", noremap = true, silent = false })
+map("n", "<leader>wd", ":close<CR>", { desc = "Close split", noremap = true, silent = false })
+map("n", "<leader>wb", ":only<CR>", { desc = "Single Pane", noremap = true, silent = false })
 
 -- Toggle Term
 map("n", "<C-q>", ":Lspsaga term_toggle<cr>", { desc = "Floating Terminal", noremap = true, silent = true })
-map("n", "<leader>t", ":sp<bar>term<cr>:resize 10<cr>", { desc = "Split Terminal", noremap = true, silent = true })
+-- map("n", "<leader>ot", ":sp<bar>term<cr>:resize 10<cr>", { desc = "Split Terminal", noremap = true, silent = true })
