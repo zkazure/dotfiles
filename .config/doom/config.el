@@ -98,6 +98,22 @@
 
 ;; (setq-default mode-require-final-newline nil)
 
+
+
+;; keep the expand available in the doom emacs
+;; (let ((major-mode (if (org-in-src-block-p t)
+;;                       (org-src-get-lang-mode (org-eldoc-get-src-lang))
+;;                     major-mode))
+;;
+;; Change above to below
+;;
+;; (let ((major-mode (cond ((org-in-src-block-p t)
+;;                          (org-src-get-lang-mode (org-eldoc-get-src-lang)))
+;;                         ((org-inside-LaTeX-fragment-p)
+;;                          'latex-mode)
+;;                         (major-mode)))
+;; https://github.com/doomemacs/doomemacs/commit/31afe2c8b0a4bc42ae8570248c49bdd1f19c0103
+
 ;; suppress the errors when expanding the snippets with subscript and superscript
 (with-eval-after-load 'org
   (add-to-list 'warning-suppress-types '(org-element org-element-parser)))
