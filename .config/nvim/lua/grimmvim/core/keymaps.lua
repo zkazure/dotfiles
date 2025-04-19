@@ -54,7 +54,7 @@ map("n", "<C-S-L>", "3<C-w><", { desc = "Resize Down", noremap = true, silent = 
 -- Editing Keymaps
 map("n", "<leader>q", ":q<cr>", { desc = "Quit File", noremap = true, silent = true })
 map("n", "<leader>Q", ":qa<cr>", { desc = "Quit All Files", noremap = true, silent = true })
-map("n", "<leader>fw", ":w<cr>", { desc = "Write File", noremap = true, silent = true })
+map("n", "<leader>fs", ":w<cr>", { desc = "Write File", noremap = true, silent = true })
 map("n", "<leader>fW", ":wa<cr>", { desc = "Write All Files", noremap = true, silent = true })
 map("n", "<leader>M", ":messages<cr>", { desc = "Show Messages", noremap = true, silent = true })
 
