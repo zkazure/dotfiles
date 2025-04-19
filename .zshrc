@@ -42,13 +42,8 @@ export PATH="$HOME/.local/bin/statusbar:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
 function em(){
-    emacsclient -t "$@"
-}
-
-function eme(){
     emacsclient -n -c "$@"
 }
-
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
