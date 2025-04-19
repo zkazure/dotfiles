@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: latex inline
+# key: lin
+# condition: t
+# --
+\\( $1 \\)

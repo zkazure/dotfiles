@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: latex-probabiliy
+# key: pro
+# --
+
+P \\left\\{ ${1:X} =${2:k} \\right\\}
