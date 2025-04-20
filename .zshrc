@@ -40,6 +40,7 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 export PATH="$HOME/.local/bin/statusbar:$PATH"
 # export PATH="$HOME/.config/emacs/bin:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
+export EDITOR="nvim"
 
 function em(){
     emacsclient -n -c "$@"
