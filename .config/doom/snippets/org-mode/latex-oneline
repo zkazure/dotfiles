@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: latex-oneline
-# key: one
-# --
-
-\\[ ${1} \\]

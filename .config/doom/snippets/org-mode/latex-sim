@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: latex-sim
-# key: sim
-# --
-
-${1:X} \\sim ${2:Distrobute}(${3:x}, ${4:y})
