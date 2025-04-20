@@ -84,11 +84,13 @@
 ;;   (rime-show-candidate 'posframe))
 ;; ;; replace this dir with your own path
 ;; (setq rime-user-data-dir "~/.config/fcitx/rime")
+
 (setq fcitx-remote-command "fcitx5-remote")
 (use-package! rime
   :custom
   (default-input-method "rime")
   (setq rime-user-data-dir "~/.config/fcitx/rime"))
+  (setq liberime-core-file "/usr/lib64/librime.so")  ; Fedora 默认库路径
 
 
 ;; (setq treemacs-file-attributes '()
@@ -117,7 +119,6 @@
 ;; suppress the errors when expanding the snippets with subscript and superscript
 (with-eval-after-load 'org
   (add-to-list 'warning-suppress-types '(org-element org-element-parser)))
-
 ;; ;; avoid company to block the cdlatex expanding
 ;; (add-hook 'org-mode-hook
 ;;           (lambda () (set company-minimum-prefix-length 4)))
