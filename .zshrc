@@ -44,6 +44,9 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 function em(){
     emacsclient -n -c "$@"
 }
+function code(){
+    codium "$@"
+}
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
