@@ -28,7 +28,6 @@ zinit light-mode for \
     romkatv/powerlevel10k
 
 zinit load zdharma-continuum/history-search-multi-word
-
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/fast-syntax-highlighting
 
@@ -36,6 +35,24 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/etc/profile.d/conda.sh" ]; then
+        . "/usr/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
 
 export PATH="$HOME/.local/bin/statusbar:$PATH"
 # export PATH="$HOME/.config/emacs/bin:$PATH"
@@ -45,8 +62,14 @@ export EDITOR="nvim"
 function em(){
     emacsclient -n -c "$@"
 }
+function en(){
+    emacs -q -l ~/dotfiles/.config/emacs/init.el "$@"
+}
 function code(){
     codium "$@"
+}
+function nv(){
+    nvim "$@"
 }
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -56,4 +79,3 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
-
