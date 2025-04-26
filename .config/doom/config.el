@@ -21,8 +21,10 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
+
 (setq doom-font (font-spec :family "FiraCode Nerd Font" :size 16 :weight 'semi-light)
-     doom-variable-pitch-font (font-spec :family "Fira Sans" :size 17))
+      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 17))
+
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -90,7 +92,7 @@
   :custom
   (default-input-method "rime")
   (setq rime-user-data-dir "~/.config/fcitx/rime"))
-  (setq liberime-core-file "/usr/lib64/librime.so")  ; Fedora 默认库路径
+;; (setq liberime-core-file "/usr/lib64/librime.so")  ; Fedora 默认库路径
 
 
 ;; (setq treemacs-file-attributes '()
