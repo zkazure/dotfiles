@@ -42,6 +42,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
+
 (setq org-directory "~/Documents/org/")
 
 
@@ -127,3 +128,12 @@
 
 (setq org-pretty-entities-include-sub-superscripts nil)
 (setq prettify-symbols-unprettify-at-point t)
+
+(setq org-agenda-files '("~/Documents/org/"))
+
+(when (executable-find "wl-paste")
+  (setq select-enable-clipboard t)
+  (setq select-enable-primary t)
+  (setq save-interprogram-paste-before-kill t)
+  (setq interprogram-paste-function
+        (lambda () (shell-command-to-string "wl-paste --no-newline"))))

@@ -54,6 +54,9 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export XMODIFIERS=@im=fcitx5
 export PATH="$HOME/.local/bin/statusbar:$PATH"
 # export PATH="$HOME/.config/emacs/bin:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
@@ -65,9 +68,6 @@ function em(){
 function en(){
     emacs -q -l ~/dotfiles/.config/emacs/init.el "$@"
 }
-function code(){
-    codium "$@"
-}
 function nv(){
     nvim "$@"
 }
@@ -78,4 +78,9 @@ function y() {
 		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
+}
+
+function centaur() {
+    export HOME=/home/kzheng/dotfiles/.config/emacs/centaur/
+    emacs
 }
