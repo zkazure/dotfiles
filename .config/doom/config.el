@@ -80,20 +80,21 @@
 
 
 
-;; (use-package! rime
-;;   :custom
-;;   ;; (rime-inline-ascii-trigger 'shift-r)
-;;   (default-input-method "rime")
-;;   (rime-show-candidate 'posframe))
-;; ;; replace this dir with your own path
-;; (setq rime-user-data-dir "~/.config/fcitx/rime")
-
-(setq fcitx-remote-command "fcitx5-remote")
 (use-package! rime
   :custom
+  ;; (rime-inline-ascii-trigger 'shift-r)
   (default-input-method "rime")
-  (setq rime-user-data-dir "~/.config/fcitx/rime"))
-;; (setq liberime-core-file "/usr/lib64/librime.so")  ; Fedora 默认库路径
+  (rime-show-candidate 'posframe))
+;; replace this dir with your own path
+(setq rime-user-data-dir "~/.local/share/fcitx5/rime/")
+(setq rime-posframe-style vertical)
+
+                                        ; (setq fcitx-remote-command "fcitx5-remote")
+                                        ; (use-package! rime
+                                        ;   :custom
+                                        ;   (default-input-method "rime")
+                                        ;   (setq rime-user-data-dir "~/.config/fcitx/rime"))
+                                        ; ;; (setq liberime-core-file "/usr/lib64/librime.so")  ; Fedora 默认库路径
 
 
 ;; (setq treemacs-file-attributes '()
