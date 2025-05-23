@@ -1,0 +1,48 @@
+[submodule ".config/emacs/new_phi/.emacs.d/modules/ivy"]
+	path = .config/emacs/new_phi/.emacs.d/modules/ivy
+	url = https://github.com/abo-abo/swiper
+[submodule ".config/emacs/new_phi/.emacs.d/modules/auto-save"]
+	path = .config/emacs/new_phi/.emacs.d/modules/auto-save
+	url = https://github.com/manateelazycat/auto-save
+[submodule ".config/emacs/new_phi/.emacs.d/modules/yasnippet"]
+	path = .config/emacs/new_phi/.emacs.d/modules/yasnippet
+	url = https://github.com/joaotavora/yasnippet
+[submodule ".config/emacs/new_phi/.emacs.d/modules/lsp-bridge"]
+	path = .config/emacs/new_phi/.emacs.d/modules/lsp-bridge
+	url = https://github.com/manateelazycat/lsp-bridge
+[submodule ".config/emacs/new_phi/.emacs.d/modules/vundo"]
+	path = .config/emacs/new_phi/.emacs.d/modules/vundo
+	url = https://github.com/casouri/vundo
+[submodule ".config/emacs/new_phi/.emacs.d/modules/symbol-overlay"]
+	path = .config/emacs/new_phi/.emacs.d/modules/symbol-overlay
+	url = https://github.com/wolray/symbol-overlay
+[submodule ".config/emacs/new_phi/.emacs.d/modules/rime"]
+	path = .config/emacs/new_phi/.emacs.d/modules/rime
+	url = https://github.com/DogLooksGood/emacs-rime
+[submodule ".config/emacs/new_phi/.emacs.d/modules/fingertip"]
+	path = .config/emacs/new_phi/.emacs.d/modules/fingertip
+	url = https://github.com/manateelazycat/fingertip
+[submodule ".config/emacs/new_phi/.emacs.d/modules/dash"]
+	path = .config/emacs/new_phi/.emacs.d/modules/dash
+	url = https://github.com/magnars/dash.el
+[submodule ".config/emacs/new_phi/.emacs.d/modules/writeroom-mode"]
+	path = .config/emacs/new_phi/.emacs.d/modules/writeroom-mode
+	url = https://github.com/joostkremers/writeroom-mode
+[submodule ".config/emacs/new_phi/.emacs.d/modules/visual-fill-column"]
+	path = .config/emacs/new_phi/.emacs.d/modules/visual-fill-column
+	url = https://codeberg.org/joostkremers/visual-fill-column.git
+[submodule ".config/emacs/new_phi/.emacs.d/modules/markdown-mode"]
+	path = .config/emacs/new_phi/.emacs.d/modules/markdown-mode
+	url = https://github.com/jrblevin/markdown-mode
+[submodule ".config/emacs/new_phi/.emacs.d/modules/rainbow-delimiters"]
+	path = .config/emacs/new_phi/.emacs.d/modules/rainbow-delimiters
+	url = https://github.com/Fanael/rainbow-delimiters
+[submodule ".config/emacs/new_phi/.emacs.d/modules/which-key"]
+	path = .config/emacs/new_phi/.emacs.d/modules/which-key
+	url = https://github.com/justbur/emacs-which-key
+[submodule ".config/emacs/new_phi/.emacs.d/modules/magit"]
+	path = .config/emacs/new_phi/.emacs.d/modules/magit
+	url = https://github.com/magit/magit.git
+[submodule ".config/emacs/new_phi/.emacs.d/lisp/markdown-mode"]
+	path = .config/emacs/new_phi/.emacs.d/lisp/markdown-mode
+	url = https://github.com/jrblevin/markdown-mode

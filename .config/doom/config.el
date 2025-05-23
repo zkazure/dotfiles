@@ -44,7 +44,7 @@
 ;; change `org-directory'. It must be set before org loads!
 
 (setq org-directory "~/Documents/org/")
-
+(setq org-agenda-files '("~/Documents/org/"))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -129,8 +129,6 @@
 
 (setq org-pretty-entities-include-sub-superscripts nil)
 (setq prettify-symbols-unprettify-at-point t)
-
-(setq org-agenda-files '("~/Documents/org/"))
 
 (when (executable-find "wl-paste")
   (setq select-enable-clipboard t)
