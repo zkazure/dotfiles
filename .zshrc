@@ -63,10 +63,7 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 export EDITOR="nvim"
 
 function em(){
-    emacsclient -n -c "$@"
-}
-function en(){
-    emacs -q -l ~/dotfiles/.config/emacs/init.el "$@"
+    emacs -nw "$@"
 }
 function nv(){
     nvim "$@"
@@ -78,9 +75,4 @@ function y() {
 		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
-}
-
-function centaur() {
-    export HOME=/home/kzheng/dotfiles/.config/emacs/centaur/
-    emacs
 }
