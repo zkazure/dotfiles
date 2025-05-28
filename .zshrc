@@ -61,6 +61,7 @@ export PATH="$HOME/.local/bin/statusbar:$PATH"
 # export PATH="$HOME/.config/emacs/bin:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export EDITOR="nvim"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 function em(){
     emacs -nw "$@"
