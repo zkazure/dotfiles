@@ -1,5 +1,6 @@
 clash-verge &
 emacs --daemon &
+# dwmblocks &
 
 feh --bg-center ~/Pictures/wallpapers/monsterHunterFire.png --bg-center ~/Pictures/wallpapers/monsterHunter.jpg
 
