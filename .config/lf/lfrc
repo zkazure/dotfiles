@@ -47,15 +47,15 @@ map '['
 map ']'
 
 ## built-in
-map <c-n> half-down
-map <c-p> half-up
+map <c-v> half-down
+map <alt-v> half-up
 map b jump-prev
 map f jump-next
 map n half-down
 map p half-up
 map zp toggle-preview
 map ` !true
-map F :filter
+map j :filter
 
 map sa :{{
     set sortby atime
@@ -111,13 +111,11 @@ cmap <backtab> cmd-menu-complete-back
 
 map D delete
 
-map a :rename
-map A :rename; cmd-end
-map I :rename; cmd-home
-map r push a<c-u>
-map R push A<c-u>
+# map I :rename; cmd-home
+map r :rename; cmd-end
+map R :rename; cmd-home
 map w $$SHELL
-map i $bat --color always --style plain,changes --pager 'less -R' "$f"
+# map i $bat --color always --style plain,changes --pager 'less -R' "$f"
 
 map U !du -csh $fx
 map E &footclient nvim $f
