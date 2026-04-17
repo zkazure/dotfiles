@@ -1,0 +1,25 @@
+set sandbox none
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+set selection-clipboard clipboard
+map p scroll half-up
+map n scroll half-down
+map D toggle_page_mode
+map r reload
+map R rotate
+map I zoom in
+map O zoom out
+map i recolor
+map P print
+map g goto top
+map [fullscreen] p scroll half-up
+map [fullscreen] n scroll half-down
+map [fullscreen] D toggle_page_mode
+map [fullscreen] r reload
+map [fullscreen] R rotate
+map [fullscreen] I zoom in
+map [fullscreen] O zoom out
+map [fullscreen] i recolor
+map [fullscreen] P print
+map [fullscreen] g goto top
