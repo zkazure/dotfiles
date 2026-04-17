@@ -1,0 +1,35 @@
+# Profile Enhancement Merge Template for Clash Verge
+
+profile:
+  store-selected: true
+
+dns:
+  use-system-hosts: false
+  enable: true
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+    # 强制战网和网易相关域名不使用 Fake-IP，解析出真实的国内 IP
+    - '+.battlenet.com.cn'
+    - '+.blizzardgames.cn'
+    - '+.netease.com'
+    - '+.163.com'
+    - '+emacs-china.org'
+
+
+prepend-rules:
+  - DONMAIN-SUFFIX,emacs-china.org,DIRECT
+  # StarCraft 2 in Proton
+  # 域名规则兜底
+  - DOMAIN-SUFFIX,battlenet.com.cn,DIRECT
+  - DOMAIN-SUFFIX,blizzardgames.cn,DIRECT
+  - DOMAIN-SUFFIX,netease.com,DIRECT
+  - DOMAIN-SUFFIX,163.com,DIRECT
+  
+  # 进程规则（针对 Linux/Proton 的特征补充，可选）
+  # 警告：如果你同时玩其他外服 Proton 游戏，请将下面这两行注释掉，完全依赖 GEOIP。
+  # 否则所有 Proton 游戏都会强制直连。
+  - PROCESS-NAME,wine64-preloader,DIRECT
+  - PROCESS-NAME,wine-preloader,DIRECT
+
+  # 核心策略：真实的大陆 IP 全部直连
+  - GEOIP,CN,DIRECT
