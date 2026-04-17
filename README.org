@@ -1,0 +1,97 @@
+#+title: DOT file
+
+* Preface
+This is the configuration for my Debian machine.
+
+* Main
+
+** inputrc
+
+#+begin_src conf :tangle ~/.inputrc
+  # 开启补全时的文件类型颜色提示 (类似 ls --color)
+  set colored-stats on
+  set colored-completion-prefix on
+
+  # 在补全列表中显示文件类型符号 (如目录加 /，可执行文件加 *)
+  set visible-stats on
+
+  # 补全时忽略大小写 (极其提升输入效率)
+  set completion-ignore-case on
+
+  # 遇到多个候选项时，按一次 Tab 直接显示列表，而不是按两次
+  set show-all-if-ambiguous on
+
+  # 优化补全前缀的显示逻辑
+  set menu-complete-display-prefix on
+#+end_src
+
+** atcoder-tools
+
+#+begin_src toml :tangle ~/.atcodertools.toml
+  [codestyle]
+  indent_type='space'
+  indent_width=4
+  template_file='~/Documents/cs_learning/atcoder/template.cpp'
+  workspace_dir='~/Documents/cs_learning/atcoder/'
+  lang='cpp'
+  [postprocess]
+  exec_on_each_problem_dir='clang-format -i ./*.cpp'
+  exec_on_contest_dir='touch CMakeLists.txt'
+  [compiler]
+  compile_command='g++ main.cpp -o main -std=c++17'
+  compile_only_when_diff_detected=true
+  [tester]
+  compile_before_testing=true
+  compile_only_when_diff_detected=true
+  timeout_adjustment=1.2
+  [etc]
+  download_without_login=false
+  parallel_download=false
+  save_no_session_cache=false
+  skip_existing_problems=false
+  in_example_format="in_{}.txt"
+  out_example_format="out_{}.txt"
+#+end_src
+
+** clang-format
+
+#+begin_src conf :tangle "~/.clang-format"
+  BasedOnStyle: LLVM
+  IndentWidth: 4
+  TabWidth: 4
+  UseTab: Never
+  ColumnLimit: 80
+  SortIncludes: true
+  IndentPPDirectives: None
+#+end_src
+
+** mouse
+
+#+begin_src conf :tangle /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
+  Section "InputClass"
+      Identifier "My Mouse"
+      MatchIsPointer "yes"
+      # 强制所有鼠标设备使用 Flat 线性模式，关闭加速
+      Option "AccelProfile" "flat"
+      # 基础速度乘数，0 为 libinput 默认，有效值域通常为 -1 到 1
+      Option "AccelSpeed" "0"
+  EndSection
+#+end_src
+
+** touchpad
+#+begin_src conf :tangle /etc/X11/xorg.conf.d/01-touchpad.conf
+  Section "InputClass"
+      Identifier "touchpad"
+      MatchIsTouchpad "on"
+      Option "Tapping" "on"
+      Option "DisableWhileTyping" "on"
+      Option "MiddleEmulation" "on"
+      Option "NaturalScrolling" "on"
+  EndSection
+#+end_src
+
+* Game
+** sc2
+users\<username>\Documents\StartCraft 2\Accounts\<account_number>\Hotkeys
+
+[[file:Hotkeys/]]
