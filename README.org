@@ -416,7 +416,7 @@ This is the configuration for my Debian machine.
   ;==========================================================
 
   [colors]
-  background = #CC232A2E
+  background = #232A2E
   background-alt = #2D353B
   foreground = #C5C8C6
   primary = #E97451
@@ -749,30 +749,6 @@ This is the configuration for my Debian machine.
   inherit = bar/base
   monitor = ${system.sys_monitor2}
   modules-right = memory cpu brightness volume wlan eth battery date
-#+end_src
-** picom
-#+begin_src conf :tangle ~/.config/picom/picom.conf
-  shadow = true;
-  shadow-radius = 12;
-  shadow-offset-x = -12;
-  shadow-offset-y = -12;
-  shadow-opacity = 0.5;
-  # 排除不需要阴影的窗口
-  # shadow-exclude = [ "class_g = 'Polybar'" ];
-
-  corner-radius = 6
-
-  fading = true
-  no-fading-openclose = true
-
-  opacity-rule = [
-      "90:class_g = '.*'"
-  ]
-  inactive-opacity = 0.90
-  active-opacity = 1
-
-  backend = "glx"
-  vsync = true
 #+end_src
 ** rofi
 
@@ -1108,6 +1084,43 @@ This is the configuration for my Debian machine.
       orientation:      horizontal;
   }
 
+#+end_src
+** picom
+#+begin_src conf :tangle ~/.config/picom/picom.conf
+  backend = "glx"
+  vsync = true
+
+  shadow = true;
+  shadow-radius = 6;
+  shadow-offset-x = -6;
+  shadow-offset-y = -6;
+  shadow-opacity = 0.4;
+  # 排除不需要阴影的窗口
+  # shadow-exclude = [ "class_g = 'Polybar'" ];
+
+  corner-radius = 6
+
+  fading = true
+  no-fading-openclose = true
+
+  inactive-opacity = 0.85
+  active-opacity = 1
+  opacity-rule = [
+      "80:class_g = 'Rofi'",
+      "90:class_g = 'Polybar'",
+      "70:class_g = 'Alacritty' && !focused",
+      "90:class_g = 'Alacritty' && focused",
+      "100:class_g = 'i3lock'"
+  ];
+
+  # 开启模糊
+  blur: {
+    method = "dual_kawase";
+    strength = 2;      # 模糊强度，通常 5-10 效果较好
+    background = true; # 模糊窗口背景
+    background-frame = false;
+    background-fixed = false;
+  }
 #+end_src
 * sudo privilege
 ** mouse
