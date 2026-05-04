@@ -1085,6 +1085,69 @@ This is the configuration for my Debian machine.
   }
 
 #+end_src
+** dunst
+#+begin_src conf :tangle ~/.config/dunst/dunstrc
+  # -*- mode: conf; -*-
+
+  [global]
+      class = Dunst
+      ### 布局与位置 ###
+      # 通知出现在右上角，距离边缘 10 像素
+      origin = top-right
+      offset = (10, 10)
+
+      # 宽度与高度
+      width = 300
+      # height = 110
+      notification_limit = 5
+
+      ### 6px 圆角规则 ###
+      corner_radius = 6
+
+      ### 边框与间隙 ###
+      # 边框宽度建议与 bspwm 一致
+      frame_width = 0
+      # 使用你的珊瑚橙作为边框
+      frame_color = "#E97451"
+      # 通知之间的间距
+      gap_size = 2
+      separator_height = 0
+
+      ### 字体与对齐 ###
+      font = "Maple Mono NF CN 10"
+      line_height = 4
+      padding = 8
+      horizontal_padding = 8
+      alignment = left
+      vertical_alignment = center
+
+      progress_bar = true
+      progress_bar_height = 4
+      progress_bar_frame_width = 1
+      progress_bar_min_width = 150
+      progress_bar_max_width = 300
+      # 进度条颜色也用珊瑚橙
+      highlight = "#E97451"
+      transparency = 20
+
+  [urgency_low]
+      background = "#101820"
+      foreground = "#C5C8C6"
+      timeout = 5
+
+  [urgency_normal]
+      background = "#101820"
+      foreground = "#C5C8C6"
+      timeout = 10
+      # 正常通知可以用珊瑚橙高亮边框
+      frame_color = "#E97451"
+
+  [urgency_critical]
+      background = "#101820"
+      foreground = "#C5C8C6"
+      frame_color = "#B33951" # 紧急通知使用你的“绯红”色
+      timeout = 0
+#+end_src
 ** picom
 #+begin_src conf :tangle ~/.config/picom/picom.conf
   backend = "glx"
@@ -1096,7 +1159,7 @@ This is the configuration for my Debian machine.
   shadow-offset-y = -6;
   shadow-opacity = 0.4;
   # 排除不需要阴影的窗口
-  # shadow-exclude = [ "class_g = 'Polybar'" ];
+  shadow-exclude = [ "class_g = 'Dunst'" ];
 
   corner-radius = 6
 
@@ -1105,6 +1168,7 @@ This is the configuration for my Debian machine.
 
   inactive-opacity = 0.85
   active-opacity = 1
+  detect-client-opacity = false;
   opacity-rule = [
       "80:class_g = 'Rofi'",
       "90:class_g = 'Polybar'",
@@ -1121,6 +1185,7 @@ This is the configuration for my Debian machine.
     background-frame = false;
     background-fixed = false;
   }
+  # blur-background-exclude = [ "class_g = 'Dunst'" ]
 #+end_src
 * sudo privilege
 ** mouse
