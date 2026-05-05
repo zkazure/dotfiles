@@ -425,14 +425,14 @@ This is the configuration for my Debian machine.
   disabled = #707880
 
   [bar/base]
-  width = 99%
+  width = 98.6%
   height = 24pt
   ; radius = 6
   ; radius-top = 0
   ; radius-bottom = 0
 
-  offset-y = 0.9%
-  offset-x = 0.5%
+  offset-y = 0.8%
+  offset-x = 0.7%
 
   wm-restack = bspwm
   overrideredirect = true
