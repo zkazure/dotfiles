@@ -166,6 +166,61 @@ This is the configuration for my Debian machine.
 
 #+end_src
 
+** resticprofile
+
+#+begin_src toml :tangle "~/.config/resticprofile/profiles.toml"
+  version = "1"
+
+
+  [default]
+    repository = "local:/home/kazure/Backup"
+    password-file = ".pw"
+    verbose = true
+
+  [brain]
+    inherit = "default"
+    initialize = true
+    [brain.backup]
+      source = [
+        "/home/kazure/.config",
+        "/home/kazure/Documents",
+        "/home/kazure/Developments",
+      ]
+      schedule = "03:00"
+      schedule-permission = "user"
+      schedule-lock-wait = "2h"
+    [brain.retention]
+      before-backup = false
+      after-backup = true
+      keep-last = 1
+      keep-weekly = 1
+      prune = true
+
+  [others]
+    inherit = "default"
+    initialize = true
+
+    [others.backup]
+      prune = true
+      verbose = true
+      source = [
+        "/home/kazure/Zotero",
+        "/home/kazure/Pictures",
+        "/home/kazure/Public",
+        "/home/kauzre/Desktop",
+        "/home/kazure/Videos",
+      ]
+      schedule = "Mon 04:00"
+      schedule-permission = "user"
+      schedule-lock-wait = "2h"
+
+    [others.retention]
+      before-backup = false
+      after-backup = true
+      keep-last = 1
+      prune = true
+
+#+end_src
 * Game
 ** sc2
 =users\<username>\Documents\StartCraft 2\Accounts\<account_number>\Hotkeys=
@@ -1188,6 +1243,7 @@ This is the configuration for my Debian machine.
   # blur-background-exclude = [ "class_g = 'Dunst'" ]
 #+end_src
 * sudo privilege
+** bins
 ** mouse
 =/etc/X11/xorg.conf.d/50-mouse-acceleration.conf=
 #+begin_src conf :tangle no
