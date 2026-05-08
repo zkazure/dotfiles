@@ -294,6 +294,7 @@ This is the configuration for my Debian machine.
   bspc rule -a mplayer2 state=floating
   bspc rule -a Kupfer.py focus=on
   bspc rule -a Screenkey manage=off
+  bspc rule -a float_term state=floating center=on rectangle=1000x600+0+0
 #+end_src
 ** sxhkd
 #+begin_src conf :tangle ~/.config/sxhkd/sxhkdrc
@@ -306,6 +307,8 @@ This is the configuration for my Debian machine.
   # terminal emulator
   super + Return
   	alacritty
+  super + shift + Return
+      alacritty --class float_term
 
   # program launcher
   super + space
