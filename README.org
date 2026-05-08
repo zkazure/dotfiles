@@ -794,7 +794,7 @@ This is the configuration for my Debian machine.
   [bar/monitor1]
   inherit = bar/base
   monitor = ${system.sys_monitor1}
-  modules-right = memory cpu brightness volumeb battery date systray
+  modules-right = memory cpu brightness volume battery date systray
 
 
   [bar/monitor2]
