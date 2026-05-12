@@ -207,7 +207,8 @@ This is the configuration for my Debian machine.
         "/home/kazure/Zotero",
         "/home/kazure/Pictures",
         "/home/kazure/Public",
-        "/home/kauzre/Desktop",
+        "/home/kazure/Desktop",
+        "/home/kazure/Music",
         "/home/kazure/Videos",
       ]
       schedule = "Mon 04:00"
