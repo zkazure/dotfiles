@@ -270,6 +270,7 @@ This is the configuration for my Debian machine.
   run picom
   run flameshot
   run nm-applet
+  run blueman-applet
   # run workrave
   feh --bg-fill /usr/share/images/desktop-base/default
 
