@@ -233,9 +233,14 @@ This is the configuration for my Debian machine.
 #+begin_src sh :tangle ~/.config/bspwm/bspwmrc
   #! /bin/sh
   run() {
-    if ! pgrep -x "$1" > /dev/null; then
-      "$@" &
-    fi
+      # 提取出纯进程名，例如将 "/home/.../aw-qt" 裁剪为 "aw-qt"
+      local proc_name
+      proc_name=$(basename "$1")
+
+      # 用纯进程名去检查，用完整命令去启动
+      if ! pgrep -x "$proc_name" > /dev/null; then
+          "$@" &
+      fi
   }
 
   run sxhkd
