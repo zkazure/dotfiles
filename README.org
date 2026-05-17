@@ -272,6 +272,7 @@ This is the configuration for my Debian machine.
   run flameshot
   run nm-applet
   run blueman-applet
+  run ~/Source/activitywatch/aw-qt
   # run workrave
   feh --bg-fill /usr/share/images/desktop-base/default
 
@@ -1220,7 +1221,7 @@ This is the configuration for my Debian machine.
   fading = true
   no-fading-openclose = true
 
-  inactive-opacity = 0.85
+  inactive-opacity = 0.90
   active-opacity = 1
   detect-client-opacity = false;
   opacity-rule = [
