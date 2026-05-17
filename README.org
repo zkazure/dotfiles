@@ -278,6 +278,7 @@ This is the configuration for my Debian machine.
   run nm-applet
   run blueman-applet
   run ~/Source/activitywatch/aw-qt
+  run xss-lock -- betterlockscreen -l dim --off 2
   # run workrave
   feh --bg-fill /usr/share/images/desktop-base/default
 
@@ -363,10 +364,11 @@ This is the configuration for my Debian machine.
   	bspc node -s biggest.window
 
   super + z
-      i3lock -c 000000
+      loginctl lock-session
 
   super + shift + z
-      i3lock -c 000000 && systemctl suspend
+      systemctl suspend
+
 
   Print
       flameshot gui
