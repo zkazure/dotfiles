@@ -1269,3 +1269,19 @@ This is the configuration for my Debian machine.
       Option "NaturalScrolling" "on"
   EndSection
 #+end_src
+
+** keyboard
+=/etc/default/keyboard=
+#+begin_src conf
+  # KEYBOARD CONFIGURATION FILE
+
+  # Consult the keyboard(5) manual page.
+
+  XKBMODEL="pc105"
+  XKBLAYOUT="us"
+  XKBVARIANT=""
+  # XKBOPTIONS="ctrl:swapcaps"
+  XKBOPTIONS="ctrl:swapcaps,ctrl:swap_ralt_rctl"
+
+  BACKSPACE="guess"
+#+end_src
