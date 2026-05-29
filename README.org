@@ -1228,7 +1228,7 @@ This is the configuration for my Debian machine.
   fading = true
   no-fading-openclose = true
 
-  inactive-opacity = 0.90
+  inactive-opacity = 1
   active-opacity = 1
   detect-client-opacity = false;
   opacity-rule = [
@@ -1287,8 +1287,8 @@ This is the configuration for my Debian machine.
   XKBMODEL="pc105"
   XKBLAYOUT="us"
   XKBVARIANT=""
-  # XKBOPTIONS="ctrl:swapcaps"
-  XKBOPTIONS="ctrl:swapcaps,ctrl:swap_ralt_rctl"
+  XKBOPTIONS="ctrl:swapcaps"
+  # XKBOPTIONS="ctrl:swapcaps,ctrl:swap_ralt_rctl"
 
   BACKSPACE="guess"
 #+end_src
