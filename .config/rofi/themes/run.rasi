@@ -1,0 +1,36 @@
+/**
+ * Kazure's Unified Theme - Run Mode (Grid)
+ */
+@import "base.rasi"
+
+configuration {
+    font:             "Maple Mono NF CN 11";
+    icon-theme:       "Reversal-dark";
+    show-icons:       false;    /* 直接关闭图标显示 */
+    monitor:          -4;
+}
+
+window {
+    width:            800px;
+}
+
+listview {
+    columns:          2;
+    layout:           vertical;
+}
+
+element {
+    orientation:      vertical;
+}
+
+/* 确保图标完全不占据空间 */
+element-icon {
+    enabled:          false;
+    size:             0;
+}
+
+/* 网格模式文字居中更美观 */
+// element-text {
+    // horizontal-align: 0.5;
+// }
+

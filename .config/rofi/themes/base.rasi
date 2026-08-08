@@ -1,0 +1,104 @@
+/**
+ * Kazure's Unified Theme - Base
+ * Wallpaper: Debian Deep Navy
+ * Accent: Coral Orange (#E97451)
+ * Border-radius: 6px
+ */
+
+* {
+    bg:              #101820;
+    bg-alt:          #1a232c;
+    fg:              #C5C8C6;
+    accent:          #E97451;
+    urgent:          #B33951;
+
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+window {
+    location:         center;
+    anchor:           center;
+    /* 宽度由各主题单独定义 */
+    border:           2px solid;
+    border-radius:    6px;
+    border-color:     @accent;
+    background-color: @bg;
+    cursor:           default;
+}
+
+mainbox {
+    spacing:          10px;
+    padding:          20px;
+    background-color: transparent;
+    children:         [ "inputbar", "listview" ];
+}
+
+inputbar {
+    spacing:          10px;
+    padding:          10px;
+    border-radius:    6px;
+    background-color: @bg-alt;
+    text-color:       @fg;
+    children:         [ "prompt", "entry" ];
+}
+
+prompt {
+    background-color: inherit;
+    text-color:       @accent;
+}
+
+entry {
+    background-color: inherit;
+    text-color:       inherit;
+    cursor:           text;
+    placeholder:      "Search...";
+    placeholder-color: inherit;
+}
+
+listview {
+    lines:            8;
+    cycle:            true;
+    dynamic:          true;
+    scrollbar:        false;
+    spacing:          5px;
+    margin:           5px 0 0 0;
+    background-color: transparent;
+    /* columns, layout 等留给各子主题覆盖 */
+}
+
+element {
+    spacing:          15px;
+    padding:          8px 12px;
+    border-radius:    6px;
+    background-color: transparent;
+    text-color:       @fg;
+    cursor:           pointer;
+    /* orientation 留给子主题 */
+}
+
+element selected.normal {
+    background-color: @accent;
+    text-color:       @bg;
+}
+
+element-icon {
+    size:             24px;
+    cursor:           inherit;
+}
+
+element-text {
+    vertical-align:   0.5;
+    horizontal-align: 0.0;
+    cursor:           inherit;
+}
+
+error-message {
+    padding:          15px;
+    border:           2px solid;
+    border-radius:    6px;
+    border-color:     @urgent;
+    background-color: @bg;
+    text-color:       @fg;
+}
+

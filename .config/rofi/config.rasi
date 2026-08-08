@@ -1,0 +1,129 @@
+/**
+ * Kazure's Unified Theme - List Mode
+ * Wallpaper: Debian Deep Navy
+ * Accent: Coral Orange (#E97451)
+ * Border-radius: 6px
+ */
+
+configuration {
+    modi:                        "drun,window,run";
+    show-icons:                  true;
+    display-drun:                " ";
+    display-window:              " ";
+    display-run:                 " ";
+    drun-display-format:         "{name}";
+    font:                        "Maple Mono NF CN 11";
+    icon-theme:                  "Reversal-dark";
+    monitor:                     "-4";
+}
+
+@theme "/dev/null"
+
+* {
+    /* 核心背景：取自 Debian 默认壁纸最深层的靛蓝色 */
+    bg:               #101820;    /* 彻底不透明的深靛蓝，极具扎实感 */
+    bg-alt:           #1a232c;    /* 稍微亮一点的蓝色，用于输入栏 */
+    fg:               #C5C8C6;
+    accent:           #E97451;    /* 珊瑚橙 */
+    urgent:           #B33951;    /* 绯红 */
+
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+window {
+    location:         center;
+    anchor:           center;
+    width:            500px;      /* 列表模式不需要太宽，500px 刚好 */
+
+    enabled:          true;
+    border:           2px solid;
+    border-radius:    6px;        /* 强制 6px */
+    border-color:     @accent;
+    background-color: @bg;
+    cursor:           "default";
+}
+
+mainbox {
+    enabled:          true;
+    spacing:          10px;
+    padding:          20px;
+    background-color: transparent;
+    children:         [ "inputbar", "listview" ];
+}
+
+inputbar {
+    enabled:          true;
+    spacing:          10px;
+    padding:          10px;
+    border-radius:    6px;
+    background-color: @bg-alt;
+    text-color:       @fg;
+    children:         [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:          true;
+    background-color: inherit;
+    text-color:       @accent;
+}
+
+entry {
+    enabled:          true;
+    background-color: inherit;
+    text-color:       inherit;
+    cursor:           text;
+    placeholder:      "Search...";
+    placeholder-color: inherit;
+}
+
+listview {
+    enabled:          true;
+    columns:          1;          /* 列表模式：单列 */
+    lines:            8;          /* 显示 8 行，高度适中 */
+    cycle:            true;
+    dynamic:          true;
+    scrollbar:        false;
+    layout:           vertical;
+
+    spacing:          5px;
+    margin:           5px 0 0 0;
+    background-color: transparent;
+}
+
+element {
+    enabled:          true;
+    spacing:          15px;       /* 图标和文字的间距 */
+    padding:          8px 12px;
+    border-radius:    6px;
+    background-color: transparent;
+    text-color:       @fg;
+    /* 列表模式：水平排列 */
+    orientation:      horizontal;
+    cursor:           pointer;
+}
+
+element selected.normal {
+    background-color: @accent;
+    text-color:       @bg;        /* 选中时反色，增强可读性 */
+}
+
+element-icon {
+    size:             24px;       /* 列表模式下图标稍小一点更精致 */
+    cursor:           inherit;
+}
+
+element-text {
+    vertical-align:   0.5;
+    horizontal-align: 0.0;        /* 文字左对齐 */
+    cursor:           inherit;
+}
+
+error-message {
+    padding:          15px;
+    border:           2px solid;
+    border-radius:    6px;
+    border-color:     @urgent;
+    background-color: @bg;
+    text-color:       @fg;
+}

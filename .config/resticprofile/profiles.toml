@@ -1,0 +1,52 @@
+version = "1"
+
+
+[default]
+  repository = "local:/home/kazure/Backup"
+  password-file = ".pw"
+  verbose = true
+
+[brain]
+  inherit = "default"
+  initialize = true
+  [brain.backup]
+    source = [
+      "/home/kazure/.config",
+      "/home/kazure/Documents",
+      "/home/kazure/Developments",
+    ]
+    schedule = "03:00"
+    schedule-permission = "user"
+    schedule-lock-wait = "2h"
+  [brain.retention]
+    before-backup = false
+    after-backup = true
+    keep-last = 1
+    keep-weekly = 1
+    prune = true
+
+[others]
+  inherit = "default"
+  initialize = true
+
+  [others.backup]
+    prune = true
+    verbose = true
+    source = [
+      "/home/kazure/Zotero",
+      "/home/kazure/Pictures",
+      "/home/kazure/Public",
+      "/home/kazure/Desktop",
+      "/home/kazure/Music",
+      "/home/kazure/Videos",
+    ]
+    schedule = "Mon 04:00"
+    schedule-permission = "user"
+    schedule-lock-wait = "2h"
+
+  [others.retention]
+    before-backup = false
+    after-backup = true
+    keep-last = 1
+    prune = true
+

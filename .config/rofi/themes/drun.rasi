@@ -1,0 +1,25 @@
+/**
+ * Kazure's Unified Theme - Drun Mode
+ */
+@import "base.rasi"
+
+configuration {
+    font:             "Maple Mono NF CN 11";
+    icon-theme:       "Reversal-dark";
+    show-icons:       true;
+    monitor:          -4;
+}
+
+window {
+    width:            800px;
+}
+
+listview {
+    columns:          2;
+    layout:           vertical;
+}
+
+element {
+    orientation:      horizontal;
+}
+

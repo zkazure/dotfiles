@@ -1,0 +1,15 @@
+# 开启补全时的文件类型颜色提示 (类似 ls --color)
+set colored-stats on
+set colored-completion-prefix on
+
+# 在补全列表中显示文件类型符号 (如目录加 /，可执行文件加 *)
+set visible-stats on
+
+# 补全时忽略大小写 (极其提升输入效率)
+set completion-ignore-case on
+
+# 遇到多个候选项时，按一次 Tab 直接显示列表，而不是按两次
+set show-all-if-ambiguous on
+
+# 优化补全前缀的显示逻辑
+set menu-complete-display-prefix on

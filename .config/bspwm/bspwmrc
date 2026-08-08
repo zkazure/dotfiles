@@ -1,0 +1,73 @@
+#! /bin/sh
+run() {
+    # 提取出纯进程名，例如将 "/home/.../aw-qt" 裁剪为 "aw-qt"
+    local proc_name
+    proc_name=$(basename "$1")
+
+    # 用纯进程名去检查，用完整命令去启动
+    if ! pgrep -x "$proc_name" > /dev/null; then
+        "$@" &
+    fi
+}
+
+run sxhkd
+
+INTERNAL="eDP"
+EXTERNAL="HDMI-A-0"
+
+# 检查外接显示器是否连接
+if xrandr -q | grep -q "${EXTERNAL} connected"; then
+    # 1. 确保 xrandr 激活了显示器布局（根据你的 xrandr 输出，这一步其实系统已做，但显式声明更稳）
+    xrandr --output "$INTERNAL" --primary --mode 1920x1200 --pos 1920x0 \
+           --output "$EXTERNAL" --mode 1920x1080 --pos 0x120
+
+    # 2. 为不同显示器分配“唯一”且“不重复”的桌面名称
+    # 方案：内置屏 1-5，外接屏 6-10
+    bspc monitor "$INTERNAL" -d VI VII VIII IX X
+    bspc monitor "$EXTERNAL" -d I II III IV V
+
+    # 3. 调整顺序
+    bspc wm -O "$EXTERNAL" "$INTERNAL"
+
+    polybar monitor1 &
+    polybar monitor2 &
+else
+    # 只有内置屏时，分配全部 10 个桌面
+    bspc monitor "$INTERNAL" -d 1 2 3 4 5 6 7 8 9 10
+    polybar base &
+fi
+
+emacs --daemon &
+run dunst
+run clash-verge
+run picom
+run flameshot
+run nm-applet
+run blueman-applet
+run ~/Source/activitywatch/aw-qt
+run xss-lock -- betterlockscreen -l dim --off 2
+# run workrave
+feh --bg-fill /usr/share/images/desktop-base/default
+
+xset r rate 200 50
+
+bspc config focused_border_color "#E97451"
+bspc config normal_border_color  "#232A2E"
+bspc config active_border_color  "#B33951"
+
+bspc config border_width        2
+bspc config window_gap          12
+
+bspc config split_ratio          0.48
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc config focus_follows_pointer true
+bspc config pointer_follows_focus true
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a float_term state=floating center=on rectangle=1000x600+0+0
