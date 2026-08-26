@@ -1,0 +1,14 @@
+font-family = Maple Mono NF CN
+
+# 取消连字功能
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+
+shell-integration-features = no-cursor
+cursor-style = block
+
+# 不要总是提示，很烦人
+app-notifications = no-clipboard-copy
+
+mouse-scroll-multiplier = 5
