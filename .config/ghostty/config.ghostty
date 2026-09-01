@@ -12,3 +12,5 @@ cursor-style = block
 app-notifications = no-clipboard-copy
 
 mouse-scroll-multiplier = 5
+
+keybind = ctrl+enter=unbind
