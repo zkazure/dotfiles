@@ -14,3 +14,4 @@ app-notifications = no-clipboard-copy
 mouse-scroll-multiplier = 5
 
 keybind = ctrl+enter=unbind
+keybind = ctrl+comma=unbind
