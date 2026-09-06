@@ -1,7 +1,27 @@
 #+title: DOT file
 
-* Preface
+* Prologue
+
 This is the configuration for my Debian machine.
+
+* Getting Started
+
+#+begin_src sh
+  # 检查 stow，没有则安装（--dotfiles 需要 >= 2.3）
+  command -v stow >/dev/null 2>&1 || sudo apt install stow
+
+  # 克隆到 $HOME 下（路径必须能解析到 ~/dotfiles）
+  cd ~
+  git clone <repo-url> dotfiles
+
+  cd ~/dotfiles
+  # 逐文件链接
+  stow --dotfiles --no-folding -t ~ .config home
+  # .themes 整目录链接（默认折叠）
+  stow -t ~ .themes
+#+end_src
+
+本地文件（=~/.config/resticprofile/.pw=、=~/.config/xfce4/xfconfbak= =panelbak= =src=）不进仓库，stow 不会碰它们。
 
 * Game
 ** sc2
