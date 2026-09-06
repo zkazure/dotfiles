@@ -1,0 +1,24 @@
+font:
+  # Font size
+  size: 12.0
+
+  # The normal (regular) font
+  normal:
+    family: "Maple Mono NF"
+    # You can specify a style if you want, but "family" is usually enough.
+    # style: "Regular"
+
+  # The bold font
+  bold:
+    family: "Maple Mono NF"
+    style: "Bold"
+
+  # The italic font
+  italic:
+    family: "Maple Mono NF"
+    style: "Italic"
+
+  # The bold italic font
+  bold_italic:
+    family: "Maple Mono NF"
+    style: "Bold Italic"

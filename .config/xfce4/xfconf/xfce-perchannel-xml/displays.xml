@@ -17,8 +17,8 @@
       <property name="Primary" type="bool" value="false"/>
       <property name="Scale" type="double" value="1"/>
       <property name="Position" type="empty">
-        <property name="X" type="int" value="1920"/>
-        <property name="Y" type="int" value="0"/>
+        <property name="X" type="int" value="0"/>
+        <property name="Y" type="int" value="1080"/>
       </property>
     </property>
     <property name="HDMI-A-0" type="string" value="ViewSonic 24&quot;">
@@ -30,11 +30,11 @@
       <property name="ModeFlags" type="uint64" value="5"/>
       <property name="Rotation" type="int" value="0"/>
       <property name="Reflection" type="string" value="0"/>
-      <property name="Primary" type="bool" value="false"/>
+      <property name="Primary" type="bool" value="true"/>
       <property name="Scale" type="double" value="1"/>
       <property name="Position" type="empty">
         <property name="X" type="int" value="0"/>
-        <property name="Y" type="int" value="120"/>
+        <property name="Y" type="int" value="0"/>
       </property>
     </property>
   </property>

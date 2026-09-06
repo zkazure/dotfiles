@@ -101,4 +101,3 @@ error-message {
     background-color: @bg;
     text-color:       @fg;
 }
-

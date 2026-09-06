@@ -1,27 +1,3 @@
-[env]
-TERM = "xterm-256color"
-COLORTERM = "truecolor"
-WINIT_X11_SCALE_FACTOR = "1"
-
-[font]
-size = 12.0
-
-[font.normal]
-family = "Maple Mono NF CN"
-style = "Regular"
-
-[font.bold]
-family = "Maple Mono NF CN"
-style = "Bold"
-
-[font.italic]
-family = "Maple Mono NF CN"
-style = "Italic"
-
-[font.bold_italic]
-family = "Maple Mono NF CN"
-style = "Bold Italic"
-
 [colors.primary]
 background = "#24273a"
 foreground = "#cad3f5"

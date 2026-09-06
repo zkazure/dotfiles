@@ -49,4 +49,3 @@ version = "1"
     after-backup = true
     keep-last = 1
     prune = true
-
