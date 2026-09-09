@@ -4,6 +4,16 @@
 configs:
 - level: 1
   monitors:
+  - id: "a96642f1e97b8e61837dfff232463e4cf945e3c9"
+    display_name: "Technical Concepts Ltd TCL MT55 0x01010101 (HDMI-A-0)"
+    geometry:
+      x: 1920
+      y: 0
+      width: 1360
+      height: 768
+  icons: {}
+- level: 1
+  monitors:
   - id: "f29936ded95c66c0b224f5f924cb2a0c9eb90dfc"
     display_name: "ViewSonic Corporation VA24G25 Y5K251821915 (HDMI-A-0)"
     geometry:
@@ -26,30 +36,39 @@ configs:
       width: 1920
       height: 1080
   icons:
-    "OnePlus \u4E00\u52A0 Ace 3V":
-      row: 0
-      col: 0
-      last_seen: 1787585814044295
     "/home/kazure/Desktop/\u4E2D\u671F\u7B54\u8FA9.pptx":
       row: 4
       col: 3
     "/home/kazure/Desktop/2025-09-20_20-24.png":
       row: 7
       col: 9
+    "E62AD4CE2AD49D3D":
+      row: 2
+      col: 0
+      last_seen: 1788685981342373
+    "/home/kazure/Desktop/plan.md":
+      row: 0
+      col: 0
     "\u4E00\u52A0 Ace 3V":
       row: 0
       col: 0
       last_seen: 1787585522814098
-- level: 1
-  monitors:
-  - id: "a96642f1e97b8e61837dfff232463e4cf945e3c9"
-    display_name: "Technical Concepts Ltd TCL MT55 0x01010101 (HDMI-A-0)"
-    geometry:
-      x: 1920
-      y: 0
-      width: 1360
-      height: 768
-  icons: {}
+    "/home/kazure/Desktop/workspace":
+      row: 0
+      col: 0
+    "OnePlus \u4E00\u52A0 Ace 3V":
+      row: 0
+      col: 0
+      last_seen: 1787585814044295
+    "/home/kazure/Desktop/fp-usb.xml":
+      row: 1
+      col: 0
+    ? "/home/kazure/Desktop/\u8F66\u5C14\u5C3C599\u94A2\u7434\u521D\u7EA7\u6559\u7A0B
+      (\uFF08\u7F8E\uFF09\u5A01\u62C9\u5FB7\xB7\u963F\xB7\u5E15\u5C14\u9ED8\u7F16\u6CE8,
+      (\u5965)\u5361\u5C14\xB7\u8F66\u5C14\u5C3C(Carl Czerny)\u66F2] etc.) (z-library.sk,
+      1lib.sk, z-lib.sk).pdf"
+    : row: 1
+      col: 0
 - level: 0
   monitors:
   - id: "493d4ebc716297eac2661141a5e07298ab0095bc"
@@ -85,6 +104,9 @@ configs:
       col: 1
     "/home/kazure/Desktop/\u3001.png":
       row: 9
+      col: 0
+    "/home/kazure/Desktop/PianoBooster-1.0.0-x86_64.AppImage":
+      row: 1
       col: 0
     "/home/kazure/Desktop/2025-08-01_23-21.png":
       row: 0
@@ -222,22 +244,22 @@ configs:
     "/home/kazure/Desktop/2026-04-03_12-56.png":
       row: 8
       col: 0
-    "/home/kazure/Desktop/net.lutris.battlenet-1.desktop":
-      row: 2
-      col: 1
-    "/home/kazure/Desktop/output.pdf":
-      row: 9
-      col: 0
     "/home/kazure/Desktop/2.png":
       row: 10
       col: 0
+    "/home/kazure/Desktop/output.pdf":
+      row: 9
+      col: 0
+    "/home/kazure/Desktop/net.lutris.battlenet-1.desktop":
+      row: 2
+      col: 1
+    "/home/kazure/Desktop/ventory":
+      row: 1
+      col: 1
     "68C5-2200":
       row: 3
       col: 1
       last_seen: 1766121400136359
-    "/home/kazure/Desktop/ventory":
-      row: 1
-      col: 1
     "/home/kazure/Desktop/Test":
       row: 6
       col: 3
@@ -259,13 +281,16 @@ configs:
     "/home/kazure/Desktop/k\u7C07\u7C7B.png":
       row: 4
       col: 1
-    "/home/kazure/Desktop/2025-07-22_00-41.png":
-      row: 3
+    "/home/kazure/Desktop/ZCode-3.11.2-linux-x64.AppImage":
+      row: 1
       col: 1
     "B741-49B7":
       row: 8
       col: 0
       last_seen: 1760163267987207
+    "/home/kazure/Desktop/2025-07-22_00-41.png":
+      row: 3
+      col: 1
     "A4CD-6F50":
       row: 3
       col: 0
@@ -353,27 +378,27 @@ configs:
     "/home/kazure/Desktop/krita-5.3.1-x86_64.AppImage":
       row: 0
       col: 10
-    "/home/kazure/Desktop/2026-05-01_11-22.png":
-      row: 6
-      col: 1
-    "68C4-26D8":
-      row: 7
-      col: 0
-      last_seen: 1757686338723956
-    "Trash":
-      row: 7
-      col: 0
-    "Amazfit Stratos 3":
-      row: 5
-      col: 1
-      last_seen: 1774498186148963
-    "/home/kazure/Desktop/2025-08-08_23-24.png":
-      row: 2
-      col: 2
     "5c67c78f-b8c1-4009-af90-9746941c833d":
       row: 3
       col: 0
       last_seen: 1748489037709592
+    "68C4-26D8":
+      row: 7
+      col: 0
+      last_seen: 1757686338723956
+    "/home/kazure/Desktop/2026-05-01_11-22.png":
+      row: 6
+      col: 1
+    "Trash":
+      row: 7
+      col: 0
+    "/home/kazure/Desktop/2025-08-08_23-24.png":
+      row: 2
+      col: 2
+    "Amazfit Stratos 3":
+      row: 5
+      col: 1
+      last_seen: 1774498186148963
     "/home/kazure/Desktop/net.lutris.starcraft-ii-2.desktop":
       row: 5
       col: 0

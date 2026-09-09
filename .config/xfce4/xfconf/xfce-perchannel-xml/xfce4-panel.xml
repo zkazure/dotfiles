@@ -73,6 +73,7 @@
         <value type="string" value="fcitx5 tray window"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="484eCTt_G1"/>
         <value type="string" value="tray-icon tray app clash-verge-rev-tray"/>
         <value type="string" value="nm-applet"/>
         <value type="string" value="IFpsCNYfdI"/>

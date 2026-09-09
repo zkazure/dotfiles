@@ -26,6 +26,7 @@
       <value type="string" value="Xfce volume control"/>
       <value type="string" value="xfce4-power-manager"/>
       <value type="string" value="xfce4-settings-helper"/>
+      <value type="string" value="zcode"/>
       <value type="string" value="zen"/>
       <value type="string" value="钉钉"/>
     </property>
