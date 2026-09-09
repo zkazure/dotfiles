@@ -15,10 +15,12 @@ This is the configuration for my Debian machine.
   git clone <repo-url> dotfiles
 
   cd ~/dotfiles
-  # 逐文件链接
-  stow --dotfiles --no-folding -t ~ .config home
-  # .themes 整目录链接（默认折叠）
-  stow -t ~ .themes
+  # .config 内容逐文件链接到 ~/.config
+  stow --dotfiles --no-folding -t ~/.config .config
+  # 家目录点文件链接到 ~（dot- 前缀映射）
+  stow --dotfiles -t ~ home
+  # .themes 整目录链接
+  ln -s dotfiles/.themes ~/.themes
 #+end_src
 
 本地文件（=~/.config/resticprofile/.pw=、=~/.config/xfce4/xfconfbak= =panelbak= =src=）不进仓库，stow 不会碰它们。
