@@ -1,0 +1,3 @@
+export COLORTERM=truecolor
+export HF_ENDPOINT=https://hf-mirror.com
+export LANG=en_US.UTF-8

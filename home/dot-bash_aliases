@@ -1,0 +1,9 @@
+
+alias tte="upower -i /org/freedesktop/UPower/devices/battery_BATT"
+alias activate="source .venv/bin/activate"
+alias ccmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1"
+
+alias em="emacs -nw"
+alias sem="sudo emacs -nw"
+alias aptuu="sudo apt update && sudo apt upgrade"
+alias screenoff="xset dpms force off"
