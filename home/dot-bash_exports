@@ -1,3 +1,6 @@
 export COLORTERM=truecolor
 export HF_ENDPOINT=https://hf-mirror.com
 export LANG=en_US.UTF-8
+
+# 每次回到本地命令行提示符前，自动强制关闭鼠标追踪模式。
+PROMPT_COMMAND='printf "\e[?1000l\e[?1002l\e[?1003l\e[?1006l"; '"$PROMPT_COMMAND"
