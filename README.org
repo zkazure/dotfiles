@@ -12,18 +12,25 @@ This is the configuration for my Debian machine.
 
   # 克隆到 $HOME 下（路径必须能解析到 ~/dotfiles）
   cd ~
-  git clone <repo-url> dotfiles
+  git clone https://github.com/zkazure/dotfiles.git dotfiles
 
   cd ~/dotfiles
   # .config 内容逐文件链接到 ~/.config
   stow --dotfiles --no-folding -t ~/.config .config
   # 家目录点文件链接到 ~（dot- 前缀映射）
   stow --dotfiles -t ~ home
+  cat >> ~/.bashrc <<'EOF'
+
+  if [ -f ~/.bash_exports ]; then
+      . ~/.bash_exports
+  fi
+  EOF
+
   # .themes 整目录链接
   ln -s dotfiles/.themes ~/.themes
 #+end_src
 
-本地文件（=~/.config/resticprofile/.pw=、=~/.config/xfce4/xfconfbak= =panelbak= =src=）不进仓库，stow 不会碰它们。
+本地文件（ =~/.config/resticprofile/.pw= 、 =~/.config/xfce4/xfconfbak= =panelbak= =src= ）不进仓库，stow 不会碰它们。
 
 * Game
 ** sc2
